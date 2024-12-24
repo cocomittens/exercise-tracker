@@ -1,7 +1,11 @@
 {
     "compilerOptions": {
-      "types": ["node", "react", "react-dom"],
+      "types": ["node", "react", "react-dom", "vite/client"],
       "jsx": "react",
-      "esModuleInterop": true
+      "esModuleInterop": true,
+      "target": "esnext",
+      "module": "esnext",
+       "moduleResolution": "node",
+       "skipLibCheck": true,
     }
   }
