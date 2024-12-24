@@ -5,4 +5,5 @@ export type Exercise = {
   unit: string;
   date: string;
   id?: string;
+  _id?: string;
 };
