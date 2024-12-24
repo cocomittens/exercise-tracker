@@ -1,34 +1,33 @@
-import { ExerciseProvider } from "./context/exercise";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { Navigation } from "./components/Navigation";
 import Home from "./pages/Home";
 import CreateExercise from "./pages/CreateExercise";
 import EditExercise from "./pages/EditExercise";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navigation } from "./components/Navigation";
-import React from "react";
 
 import "./App.css";
 
 function App() {
   return (
-    <ExerciseProvider>
-      <Router>
-        <Navigation />
-        <header>
-          <h1>Exercise Tracker</h1>
-          <p>App to keep track of a list of exercises.</p>
-          <p>
-            Click the icons to delete or edit an exercise, or create an exercise
-            with the create button above.
-          </p>
-        </header>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create" element={<CreateExercise />} />
-          <Route path="/edit" element={<EditExercise />} />
-        </Routes>
-      </Router>
+    <>
+      <Navigation />
+      <header>
+        <h1>Exercise Tracker</h1>
+        <p>App to keep track of a list of exercises.</p>
+        <p>
+          Click the icons to delete or edit an exercise, or create one with the
+          create button above.
+        </p>
+      </header>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<CreateExercise />} />
+        <Route path="/edit" element={<EditExercise />} />
+      </Routes>
+
       <footer>© 2024 Corrie Stoddard</footer>
-    </ExerciseProvider>
+    </>
   );
 }
 
