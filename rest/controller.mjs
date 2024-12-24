@@ -1,8 +1,18 @@
 import "dotenv/config";
+import { auth } from "express-openid-connect";
 import express from "express";
 import asyncHandler from "express-async-handler";
 import * as exercises from "./model.mjs";
 import { ExpressValidator } from "express-validator";
+
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  baseURL: "http://localhost:3000",
+  clientID: process.env.AUTH0_CLIENT_ID,
+  issuerBaseURL: process.env.AUTH0_DOMAIN,
+  secret: process.env.SECRET_KEY,
+};
 
 const { body, validationResult } = new ExpressValidator();
 
@@ -22,6 +32,8 @@ const isValidDate = (value) => {
 const app = express();
 
 app.use(express.json());
+
+app.use(auth(config));
 
 app.post(
   "/exercises",
