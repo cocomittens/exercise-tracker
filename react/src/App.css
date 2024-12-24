@@ -1,0 +1,157 @@
+#root {
+  max-width: 1280px;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+#exercise-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#exercise-form fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  border-radius: 1em;
+  align-items: center;
+}
+
+#exercise-form fieldset label {
+  margin: 0.5em 0;
+}
+
+#exercise-form button {
+  margin-top: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  background-color: #646cff;
+  color: white;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+#weight {
+  width: 14vw;  
+}
+
+#unit {
+  width: 5vw;
+}
+
+#weight-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#weight-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+svg {
+  height: 1.2em;
+  width: 1.2em;
+}
+
+svg:hover {
+  cursor: pointer;
+  fill: #646cff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #fff;
+  background-color: #242424;
+  width: 100vw;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+  margin: 0 0.25em;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+input {
+  font-family: inherit;
+  width: 20vw;
+}
+
+input, select {
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+tr th {
+  border: 1px solid #646cff;
+  color: #fff;
+  padding: 0.5em;
+}
+
+tr td {
+  border: 1px solid #ccc;
+  color: #fff;
+  padding: 0.25em;
+}
+
+#actions {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.25em;
+}
+
+table {
+  width: 80%;
+}
